@@ -1,0 +1,41 @@
+<ion-view class="pane">
+  <ion-header-bar align-title="center" class="bar bar-positive" data-component="crn-ion-header-bar">
+    <div class="buttons buttons-left header-item">
+      <button class="button button-clear" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
+    </div>
+    <h1 class="title">{{'Home.view.Home' | translate }}</h1>
+    <div class="buttons buttons-right header-item">
+      <button class="button button-clear" menu-toggle="right" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="scroll-content has-header" data-component="crn-ion-content">
+      <label class="item item-input item-select component-holder" data-component="crn-select" id="crn-select-543684" >
+          <div class="input-label">
+            Endereço
+          </div>
+          <select ng-model="vars.combobox6705" id="select-6705" ng-click="cronapi.client('js.blockly.Localizacao.limpaCampos').run()">
+              <option data-component="crn-item-select" class="" value="1" ></option>
+              <option data-component="crn-item-select" class="" value="2" >Local Atual</option>
+              <option data-component="crn-item-select" class="" value="3" >Digitar endereço</option>
+          </select>
+      </label>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-432745">
+          <input id="cep" type="text" placeholder="Seu Cep aqui" ng-model="vars.cep" mask="" keyboard="" ng-focus="cronapi.server('blockly.PegaTexto.pegaTextoInput').run()" ng-blur="cronapi.server('blockly.PegaTexto.buscaCep').run()">
+      </label>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-122525">
+          <input id="estado" type="text" placeholder="Estado" ng-model="vars.estado" mask="" keyboard="">
+      </label>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-435179">
+          <input id="cidade" type="text" placeholder="Cidade" ng-model="vars.cidade" mask="" keyboard="">
+      </label>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-152804">
+          <input id="bairro" type="text" placeholder="Bairro" ng-model="vars.bairro" mask="" keyboard="">
+      </label>
+      <label class="item item-input component-holder" data-component="crn-input" id="crn-input-918087">
+          <input id="logradouro" type="text" placeholder="Logradouro" ng-model="vars.logradouro" mask="" keyboard="">
+      </label>
+      <div class="component-holder ng-binding ng-scope" data-component="crn-google-maps" id="maps-exemplo" ng-init="">
+        <div id="google-maps" token="AIzaSyA2paKBkuaM15miMJk9wxkdvGz2tzby5y4" style="height: 400px;" class=""></div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,38 @@
+<ion-view class="pane">
+    <ion-content data-container="true" data-component="crn-ion-content" class="scroll-content menu-view">
+        <ion-list class=" disable-user-behavior list">
+            <!-- Menu -->
+            <div class="component-holder" data-component="crn-navbar" id="menu-blue">
+                <div class="nav navbar-nav">
+                    <a menu-close="" class="item item-avatar-left component-holder" xattr-position="item-avatar-left" href="" data-component="crn-list-item-avatar" id="crn-list-item-avatar-119775">
+                        <div class="user-avatar">
+                            <i class="icon ion-person"></i>
+                        </div>
+                        <div class="item item-content text-left" xattr-text-position="text-left">
+                            <h2 class="light" xattr-theme="light">{{session.user.name}}</h2>
+                            <h4 class="light" xattr-theme="light">{{session.user.username}}</h4>
+                        </div> </a>
+                </div>
+                <cron-mobile-menu class="component-holder" data-component="crn-mobile-menu" options="{&quot;escope&quot;:&quot;MOBILE&quot;,&quot;subMenuOptions&quot;:[{&quot;id&quot;:&quot;1iynakho2n6lu&quot;,&quot;name&quot;:&quot;Home&quot;,&quot;title&quot;:&quot;{{ 'Home.view.Home' | translate }}&quot;,&quot;iconClass&quot;:&quot;icon ion-home&quot;,&quot;action&quot;:&quot;cronapi.screen.changeView('#/app/logged/home', [])&quot;,&quot;level&quot;:1,&quot;textPosition&quot;:&quot;left&quot;,&quot;imagePosition&quot;:&quot;left&quot;,&quot;contentTheme&quot;:&quot;light&quot;,&quot;iconTheme&quot;:&quot;light&quot;,&quot;menuItems&quot;:[]},{&quot;id&quot;:&quot;u87yf1261v8k&quot;,&quot;name&quot;:&quot;Users&quot;,&quot;title&quot;:&quot;{{ 'Users.view.Users' | translate }}&quot;,&quot;iconClass&quot;:&quot;icon ion-person&quot;,&quot;security&quot;:&quot;visible : Administrators, enabled : Administrators&quot;,&quot;action&quot;:&quot;cronapi.screen.changeView('#/app/logged/user', [])&quot;,&quot;level&quot;:1,&quot;textPosition&quot;:&quot;left&quot;,&quot;imagePosition&quot;:&quot;left&quot;,&quot;contentTheme&quot;:&quot;light&quot;,&quot;iconTheme&quot;:&quot;light&quot;,&quot;menuItems&quot;:[]},{&quot;id&quot;:&quot;1ibe8mtn3r2au&quot;,&quot;name&quot;:&quot;ChangePassword&quot;,&quot;title&quot;:&quot;{{'Home.view.ChangePassword' | translate}}&quot;,&quot;iconClass&quot;:&quot;icon ion-locked&quot;,&quot;action&quot;:&quot;cronapi.client('js.blockly.auth.ChangePassword.openModal').run()&quot;,&quot;level&quot;:1,&quot;textPosition&quot;:&quot;left&quot;,&quot;imagePosition&quot;:&quot;left&quot;,&quot;contentTheme&quot;:&quot;light&quot;,&quot;iconTheme&quot;:&quot;light&quot;,&quot;menuItems&quot;:[]},{&quot;id&quot;:&quot;1ib99cnopnnsk&quot;,&quot;name&quot;:&quot;Sair&quot;,&quot;title&quot;:&quot;{{'Home.view.Sair' | translate}}&quot;,&quot;iconClass&quot;:&quot;icon ion-log-out&quot;,&quot;action&quot;:&quot;logout();&quot;,&quot;level&quot;:1,&quot;textPosition&quot;:&quot;left&quot;,&quot;imagePosition&quot;:&quot;left&quot;,&quot;contentTheme&quot;:&quot;light&quot;,&quot;iconTheme&quot;:&quot;light&quot;,&quot;menuItems&quot;:[]}]}">
+                    Dynamic Menu
+                </cron-mobile-menu>
+            </div>
+            <!-- Menu -->
+        </ion-list>
+    </ion-content>
+</ion-view>
+
+<script type="text/ng-template" id="changePassword"><ion-modal-view>
+    <ion-header-bar class="row bar bar-positive" align-title="center">
+        <h1 class="title text-right" data-component="crn-heading" ng-show="true" xattr-position="text-right">{{"Home.view.ChangePassword" | translate}}</h1>
+        <button class="button button-clear" data-component="crn-button" ng-click="cronapi.client('js.blockly.auth.ChangePassword.closeModal').run()" xattr-type="button-clear"><i class=""></i><span>{{"Home.view.Close" | translate}}</span></button>
+    </ion-header-bar>
+    <ion-content class="scroll-content has-header" data-component="crn-ion-content">
+        <form class="form-validation input-default" autocomplete="off" name="form" role="form">
+
+            <div class="list list-inset">
+                <label class="item item-input component-holder" data-component="crn-input-icon" id="crn-input-icon-124772"><i class="icon placeholder-icon ion ion-asterisk"></i> <input type="password" placeholder="{{'Home.view.Old Password' | translate}}" ng-model="vars.oldPassword"></label><label class="item item-input component-holder" data-component="crn-input-icon" id="crn-input-icon98771"><i class="icon placeholder-icon ion ion-asterisk"></i> <input type="password" placeholder="{{'Home.view.New Password' | translate}}" ng-model="vars.newPassword"></label><label class="item item-input component-holder" data-component="crn-input-icon" id="crn-input-icon25041"><i class="icon placeholder-icon ion ion-asterisk"></i> <input type="password" placeholder="{{'Home.view.Confirmation' | translate}}" ng-model="vars.confirmationPassword"></label><button class="button button-block button-positive" data-component="crn-button" ng-click="cronapi.client('js.blockly.auth.ChangePassword.changePassword').run()" ng-disabled="form.$invalid || vm.dataLoading" xattr-size=""><i class=""></i><span>{{"Home.view.ChangePassword" | translate}}</span></button>
+            </div>
+        </form>
+    </ion-content>
+    </ion-modal-view></script>
