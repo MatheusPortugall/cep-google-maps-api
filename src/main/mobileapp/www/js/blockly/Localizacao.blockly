@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly bpmnAble="false" formTarget="src/main/mobileapp/www/views/logged/home.view.html" resourceType="JS" ruleDescription="Localizacao" ruleName="Localizacao" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
-  <metadata scale="1" scrollx="131.39999999999998" scrolly="7.199999999999932" target="3xd?2N-YN#a0@zudG(0z"/>
+  <metadata scale="1" scrollx="235.4000000000002" scrolly="23.199999999999875" target="*;!XEy94M)wa(%865^VL"/>
   <block colour="#fca03b" id="*;!XEy94M)wa(%865^VL" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-97" y="53">
     <mutation>
       <arg name="latitude"/>
@@ -8,51 +8,92 @@
     <field name="NAME">definir_rendodeza_via_cep</field>
     <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
     <statement name="STACK">
-      <block colour="#5b80a5" dependencyby="*;!XEy94M)wa(%865^VL" id="|e9d]N5/h)ZUs@C-m%b}" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
-        <value name="IF0">
-          <block colour="#5b80a5" dependencyby="*;!XEy94M)wa(%865^VL" id="-e)Tgw7}^dLL%OU_sQlF" origintype="logic_negate" output="true" tooltip="Retorna verdadeiro se a entrada for falsa.  Retorna falsa se a entrada for verdadeira." type="logic_negate">
-            <value name="BOOL">
-              <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="[;c,.)K=8e5S8~p2nqa3" multilayer="false" namespace="cronapi.maps.isInitialized" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EMapa%20inicializado?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20booleana%20que%20retorna%20se%20o%20mapa%20foi%20inicializado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Id%20do%20mapa%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20mapa.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.isInitialized%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.isInitialized%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
-                <mutation name="{{cronapi.maps.isInitialized}}" return-raw-type="undefined">
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Id do mapa"/>
-                </mutation>
-                <value name="ARG0">
-                  <block colour="#934848" dependencyby="*;!XEy94M)wa(%865^VL" id="$J0Q~GOZn}oJ+*0^ODUI" origintype="ids_from_screen" output="true" type="ids_from_screen">
-                    <field name="SELECT">google-maps</field>
-                  </block>
-                </value>
+      <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="7INyt)V5gSOZ7xQ*nc:8" multilayer="false" namespace="cronapi.maps.init" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EInicializar%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20inicializa%20o%20mapa%20na%20tela%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Id%20do%20mapa%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20mapa.%3C/div%3E%3Cspan%3E%20-%20Tipo%20de%20mapa%20:%20Texto%3C/span%3E%3Cdiv%3E%20Seleciona%20qual%20mapa%20ser%C3%A1%20exibido.%20%3Cbr%3E%20%3Cul%3E%20%3Cli%3E%3Cstrong%3EMapa%3C/strong%3E:%20Exibe%20o%20mapa%20vetorizado%20destacando%20ruas%20e%20locais.%3C/li%3E%20%3Cli%3E%3Cstrong%3EH%C3%ADbrido%3C/strong%3E:%20Exibe%20o%20mapa%20por%20fotos%20de%20sat%C3%A9lites%20destacando%20ruas%20e%20locais.%3C/li%3E%20%3Cli%3E%3Cstrong%3ESat%C3%A9lite%3C/strong%3E:%20Exibe%20o%20mapa%20por%20fotos%20de%20sat%C3%A9lite%20sem%20destacamentos%3C/li%3E%20%3Cli%3E%3Cstrong%3ERelevo%3C/strong%3E:%20Exibe%20o%20mapa%20vetorizado%20destacando%20o%20terreno,%20ruas%20e%20locais.%3C/li%3E%20%3C/ul%3E%3C/div%3E%3Cspan%3E%20-%20Ponto%20central%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Define%20o%20ponto%20central%20baseado%20nas%20coordenadas%20geogr%C3%A1ficas.%3C/div%3E%3Cspan%3E%20-%20Zoom%20:%20Texto%3C/span%3E%3Cdiv%3E%20Determina%20a%20aproxima%C3%A7%C3%A3o%20do%20mapa.%20%3Cbr%3E%20%3Cul%3E%20%3Cli%3E%3Cstrong%3ELocal%3C/strong%3E:%20Aproxima%C3%A7%C3%A3o%20a%20n%C3%ADvel%20de%20uma%20localidade%20ou%20constru%C3%A7%C3%A3o;%3C/li%3E%20%3Cli%3E%3Cstrong%3ERua%3C/strong%3E:%20Aproxima%C3%A7%C3%A3o%20a%20n%C3%ADvel%20de%20uma%20rua%20ou%3C/li%3E%20%3Cli%3E%3Cstrong%3ECidade%3C/strong%3E:%20Aproxima%C3%A7%C3%A3o%20an%C3%ADvel%20da%20cidade.%3C/li%3E%20%3C/ul%3E%3C/div%3E%3Cspan%3E%20-%20Comandos%20:%20Envio%20de%20comandos%3C/span%3E%3Cdiv%3E%20Adicionar%20novos%20blocos%20de%20programa%C3%A7%C3%A3o.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.init%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.init%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.maps.init}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Id do mapa"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Tipo de mapa"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Ponto central"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Zoom"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STATEMENTSENDER" name="Comandos"/>
+        </mutation>
+        <field name="VAR_SENDERARG4">item</field>
+        <value name="ARG0">
+          <block colour="#934848" dependencyby="*;!XEy94M)wa(%865^VL" id="ZVFl0}Gm18S.#EvVBeNE" origintype="ids_from_screen" output="true" type="ids_from_screen">
+            <field name="SELECT">google-maps</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="K58E=x*evn!-ev,hXqSB" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="roadmap" value="Mapa"/>
+              <arg name="hybrid" value="Hibrido"/>
+              <arg name="satellite" value="Satélite"/>
+              <arg name="terrain" value="Relevo"/>
+            </mutation>
+            <field name="SELECT">roadmap</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id=";wL9(}:M=[p{A10JVKH}" multilayer="false" namespace="cronapi.maps.createLatLngPoint" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20coordenada%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20informa%20a%20latitude%20e%20longitude%20de%20um%20ponto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Latitude%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20lontitude%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.maps.createLatLngPoint}}" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Latitude"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="lontitude"/>
+            </mutation>
+            <value name="ARG0">
+              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ftXcSGYsH#o%0|ENZS{K" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                <field name="TEXT"/>
+              </shadow>
+              <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="M;=yH!9RY|e=:V)*Olrf" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field name="VAR">latitude</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="U[7lH|/3$]zFd5wz#?-{" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                <field name="TEXT"/>
+              </shadow>
+              <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="LX30GtCfoE;4Se%5r9!r" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field name="VAR">longitude</field>
               </block>
             </value>
           </block>
         </value>
-        <statement name="DO0">
-          <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="7INyt)V5gSOZ7xQ*nc:8" multilayer="false" namespace="cronapi.maps.init" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EInicializar%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20inicializa%20o%20mapa%20na%20tela%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Id%20do%20mapa%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20mapa.%3C/div%3E%3Cspan%3E%20-%20Tipo%20de%20mapa%20:%20Texto%3C/span%3E%3Cdiv%3E%20Seleciona%20qual%20mapa%20ser%C3%A1%20exibido.%20%3Cbr%3E%20%3Cul%3E%20%3Cli%3E%3Cstrong%3EMapa%3C/strong%3E:%20Exibe%20o%20mapa%20vetorizado%20destacando%20ruas%20e%20locais.%3C/li%3E%20%3Cli%3E%3Cstrong%3EH%C3%ADbrido%3C/strong%3E:%20Exibe%20o%20mapa%20por%20fotos%20de%20sat%C3%A9lites%20destacando%20ruas%20e%20locais.%3C/li%3E%20%3Cli%3E%3Cstrong%3ESat%C3%A9lite%3C/strong%3E:%20Exibe%20o%20mapa%20por%20fotos%20de%20sat%C3%A9lite%20sem%20destacamentos%3C/li%3E%20%3Cli%3E%3Cstrong%3ERelevo%3C/strong%3E:%20Exibe%20o%20mapa%20vetorizado%20destacando%20o%20terreno,%20ruas%20e%20locais.%3C/li%3E%20%3C/ul%3E%3C/div%3E%3Cspan%3E%20-%20Ponto%20central%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Define%20o%20ponto%20central%20baseado%20nas%20coordenadas%20geogr%C3%A1ficas.%3C/div%3E%3Cspan%3E%20-%20Zoom%20:%20Texto%3C/span%3E%3Cdiv%3E%20Determina%20a%20aproxima%C3%A7%C3%A3o%20do%20mapa.%20%3Cbr%3E%20%3Cul%3E%20%3Cli%3E%3Cstrong%3ELocal%3C/strong%3E:%20Aproxima%C3%A7%C3%A3o%20a%20n%C3%ADvel%20de%20uma%20localidade%20ou%20constru%C3%A7%C3%A3o;%3C/li%3E%20%3Cli%3E%3Cstrong%3ERua%3C/strong%3E:%20Aproxima%C3%A7%C3%A3o%20a%20n%C3%ADvel%20de%20uma%20rua%20ou%3C/li%3E%20%3Cli%3E%3Cstrong%3ECidade%3C/strong%3E:%20Aproxima%C3%A7%C3%A3o%20an%C3%ADvel%20da%20cidade.%3C/li%3E%20%3C/ul%3E%3C/div%3E%3Cspan%3E%20-%20Comandos%20:%20Envio%20de%20comandos%3C/span%3E%3Cdiv%3E%20Adicionar%20novos%20blocos%20de%20programa%C3%A7%C3%A3o.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.init%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.init%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
-            <mutation name="{{cronapi.maps.init}}" return-raw-type="undefined">
-              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Id do mapa"/>
-              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Tipo de mapa"/>
-              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Ponto central"/>
-              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Zoom"/>
-              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STATEMENTSENDER" name="Comandos"/>
+        <value name="ARG3">
+          <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="Wa5fd_D{iyXwNryO28Xx" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="16" value="Rua"/>
+              <arg name="18" value="Local"/>
+              <arg name="10" value="Cidade"/>
             </mutation>
-            <field name="VAR_SENDERARG4">item</field>
+            <field name="SELECT">16</field>
+          </block>
+        </value>
+        <statement name="ARG4">
+          <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="k]r~h^fw^C)[BEj,KK-?" multilayer="false" namespace="cronapi.maps.drawCircle" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EDesenha%20c%C3%ADrculo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20desenha%20uma%20%C3%A1rea%20circular%20no%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Id%20do%20mapa%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20mapa.%3C/div%3E%3Cspan%3E%20-%20Id%20do%20c%C3%ADrculo%20:%20Texto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20pol%C3%ADgono%20c%C3%ADrculo.%3C/div%3E%3Cspan%3E%20-%20Ponto%20central%20:%20Texto%3C/span%3E%3Cdiv%3E%20Define%20o%20ponto%20central%20baseado%20nas%20coordenadas%20geogr%C3%A1ficas.%3C/div%3E%3Cspan%3E%20-%20Tamanho%20do%20raio%20:%20Texto%3C/span%3E%3Cdiv%3E%20Raio%20do%20c%C3%ADrculo%20em%20metros.%3C/div%3E%3Cspan%3E%20-%20Cor%20do%20preenchimento%20:%20Texto%3C/span%3E%3Cdiv%3E%20Define%20a%20cor%20que%20ser%C3%A1%20preenchida%20no%20interior%20da%20%C3%A1rea.%3C/div%3E%3Cspan%3E%20-%20Cor%20do%20contorno%20:%20Texto%3C/span%3E%3Cdiv%3E%20Define%20a%20cor%20do%20contorno%20da%20%C3%A1rea.%3C/div%3E%3Cspan%3E%20-%20Opacidade%20do%20preenchimento%20:%20Texto%3C/span%3E%3Cdiv%3E%20Grau%20de%20opacidade%20do%20preenchida%20(valores%20entre%200%20e%201).%3C/div%3E%3Cspan%3E%20-%20Op%C3%A7%C3%B5es%20avan%C3%A7adas%20:%20Texto%3C/span%3E%3Cdiv%3E%20Permite%20adicionar%20op%C3%A7%C3%B5es%20avan%C3%A7adas.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.drawCircle%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.drawCircle%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+            <mutation name="{{cronapi.maps.drawCircle}}" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Id do mapa"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Id do círculo"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Ponto central"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Tamanho do raio"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Cor do preenchimento"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Cor do contorno"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Opacidade do preenchimento"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Opções avançadas"/>
+            </mutation>
             <value name="ARG0">
-              <block colour="#934848" dependencyby="*;!XEy94M)wa(%865^VL" id="ZVFl0}Gm18S.#EvVBeNE" origintype="ids_from_screen" output="true" type="ids_from_screen">
+              <block colour="#934848" dependencyby="*;!XEy94M)wa(%865^VL" id="vIhjk?!%ft;9_Ut`N7v~" origintype="ids_from_screen" output="true" type="ids_from_screen">
                 <field name="SELECT">google-maps</field>
               </block>
             </value>
             <value name="ARG1">
-              <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="K58E=x*evn!-ev,hXqSB" origintype="util_dropdown" output="true" type="util_dropdown">
-                <mutation>
-                  <arg name="roadmap" value="Mapa"/>
-                  <arg name="hybrid" value="Hibrido"/>
-                  <arg name="satellite" value="Satélite"/>
-                  <arg name="terrain" value="Relevo"/>
-                </mutation>
-                <field name="SELECT">roadmap</field>
-              </block>
+              <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="Ua@ueaLxeb?QX2KH4d^R" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">IdCirculo</field>
+              </shadow>
             </value>
             <value name="ARG2">
-              <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id=";wL9(}:M=[p{A10JVKH}" multilayer="false" namespace="cronapi.maps.createLatLngPoint" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20coordenada%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20informa%20a%20latitude%20e%20longitude%20de%20um%20ponto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Latitude%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20lontitude%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="FQ#lsK}~0h^[1?JmFSbk" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                <field name="TEXT"/>
+              </shadow>
+              <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="tla1,N~0?}i3$mx$|v1_" multilayer="false" namespace="cronapi.maps.createLatLngPoint" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20coordenada%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20informa%20a%20latitude%20e%20longitude%20de%20um%20ponto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Latitude%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20lontitude%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
                 <mutation name="{{cronapi.maps.createLatLngPoint}}" return-raw-type="undefined">
                   <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Latitude"/>
                   <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="lontitude"/>
@@ -61,7 +102,7 @@
                   <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ftXcSGYsH#o%0|ENZS{K" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
                     <field name="TEXT"/>
                   </shadow>
-                  <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="M;=yH!9RY|e=:V)*Olrf" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                  <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="]6ZMLUr#/hS$}eqXv!zw" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
                     <field name="VAR">latitude</field>
                   </block>
                 </value>
@@ -69,49 +110,68 @@
                   <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="U[7lH|/3$]zFd5wz#?-{" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
                     <field name="TEXT"/>
                   </shadow>
-                  <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="LX30GtCfoE;4Se%5r9!r" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                  <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="^4zxCE1ipd`[xgsoRsiI" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
                     <field name="VAR">longitude</field>
                   </block>
                 </value>
               </block>
             </value>
             <value name="ARG3">
-              <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="Wa5fd_D{iyXwNryO28Xx" origintype="util_dropdown" output="true" type="util_dropdown">
-                <mutation>
-                  <arg name="16" value="Rua"/>
-                  <arg name="18" value="Local"/>
-                  <arg name="10" value="Cidade"/>
-                </mutation>
-                <field name="SELECT">16</field>
-              </block>
+              <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="Hl3.DlPET`Ae=5BcXUu#" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">20</field>
+              </shadow>
             </value>
-            <statement name="ARG4">
-              <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="k]r~h^fw^C)[BEj,KK-?" multilayer="false" namespace="cronapi.maps.drawCircle" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EDesenha%20c%C3%ADrculo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20desenha%20uma%20%C3%A1rea%20circular%20no%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Id%20do%20mapa%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20mapa.%3C/div%3E%3Cspan%3E%20-%20Id%20do%20c%C3%ADrculo%20:%20Texto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20pol%C3%ADgono%20c%C3%ADrculo.%3C/div%3E%3Cspan%3E%20-%20Ponto%20central%20:%20Texto%3C/span%3E%3Cdiv%3E%20Define%20o%20ponto%20central%20baseado%20nas%20coordenadas%20geogr%C3%A1ficas.%3C/div%3E%3Cspan%3E%20-%20Tamanho%20do%20raio%20:%20Texto%3C/span%3E%3Cdiv%3E%20Raio%20do%20c%C3%ADrculo%20em%20metros.%3C/div%3E%3Cspan%3E%20-%20Cor%20do%20preenchimento%20:%20Texto%3C/span%3E%3Cdiv%3E%20Define%20a%20cor%20que%20ser%C3%A1%20preenchida%20no%20interior%20da%20%C3%A1rea.%3C/div%3E%3Cspan%3E%20-%20Cor%20do%20contorno%20:%20Texto%3C/span%3E%3Cdiv%3E%20Define%20a%20cor%20do%20contorno%20da%20%C3%A1rea.%3C/div%3E%3Cspan%3E%20-%20Opacidade%20do%20preenchimento%20:%20Texto%3C/span%3E%3Cdiv%3E%20Grau%20de%20opacidade%20do%20preenchida%20(valores%20entre%200%20e%201).%3C/div%3E%3Cspan%3E%20-%20Op%C3%A7%C3%B5es%20avan%C3%A7adas%20:%20Texto%3C/span%3E%3Cdiv%3E%20Permite%20adicionar%20op%C3%A7%C3%B5es%20avan%C3%A7adas.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.drawCircle%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.drawCircle%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
-                <mutation name="{{cronapi.maps.drawCircle}}" return-raw-type="undefined">
+            <value name="ARG4">
+              <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="+_oCwApth8]^d}eSHBL=" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">gray</field>
+              </shadow>
+            </value>
+            <value name="ARG5">
+              <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="0UZ-%8@}K0wK#=+.Y:T}" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">black</field>
+              </shadow>
+            </value>
+            <value name="ARG6">
+              <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="ggrjSoQ/33F6(Va)|8@{" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">0.4</field>
+              </shadow>
+            </value>
+            <value name="ARG7">
+              <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="l%W+XnRVG;]wKi:BDjyL" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT"/>
+              </shadow>
+            </value>
+            <next>
+              <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="JW,*:j^-mgrpNr9duIWn" multilayer="false" namespace="cronapi.maps.createMarker" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20marcador%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20marcador%20no%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Id%20do%20mapa%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20mapa.%3C/div%3E%3Cspan%3E%20-%20Id%20do%20marcador%20:%20Texto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20marcador%20no%20mapa.%3C/div%3E%3Cspan%3E%20-%20T%C3%ADtulo%20:%20Texto%3C/span%3E%3Cdiv%3E%20T%C3%ADtulo%20do%20marcador.%3C/div%3E%3Cspan%3E%20-%20Ponto%20:%20Texto%3C/span%3E%3Cdiv%3E%20Definir%20ponto%20para%20iniciar%20marcador.%3C/div%3E%3Cspan%3E%20-%20%C3%8Dcone%20:%20Texto%3C/span%3E%3Cdiv%3E%20Define%20o%20%C3%ADcone%20do%20marcador.%3C/div%3E%3Cspan%3E%20-%20Janela%20de%20informa%C3%A7%C3%B5es%20:%20Texto%3C/span%3E%3Cdiv%3E%20Conte%C3%BAdo%20que%20ir%C3%A1%20ser%20exibido%20na%20janela%20aberta%20ap%C3%B3s%20um%20clique%20no%20marcador.%3C/div%3E%3Cspan%3E%20-%20Op%C3%A7%C3%B5es%20avan%C3%A7adas%20:%20Texto%3C/span%3E%3Cdiv%3E%20Permite%20adicionar%20op%C3%A7%C3%B5es%20avan%C3%A7adas.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.createMarker%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.createMarker%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                <mutation name="{{cronapi.maps.createMarker}}" return-raw-type="undefined">
                   <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Id do mapa"/>
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Id do círculo"/>
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Ponto central"/>
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Tamanho do raio"/>
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Cor do preenchimento"/>
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Cor do contorno"/>
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Opacidade do preenchimento"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Id do marcador"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Título"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Ponto"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Ícone"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Janela de informações"/>
                   <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Opções avançadas"/>
                 </mutation>
                 <value name="ARG0">
-                  <block colour="#934848" dependencyby="*;!XEy94M)wa(%865^VL" id="vIhjk?!%ft;9_Ut`N7v~" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                  <block colour="#934848" dependencyby="*;!XEy94M)wa(%865^VL" id="7(|I#NO[{.si8Y[S%.u6" origintype="ids_from_screen" output="true" type="ids_from_screen">
                     <field name="SELECT">google-maps</field>
                   </block>
                 </value>
                 <value name="ARG1">
-                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="Ua@ueaLxeb?QX2KH4d^R" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                    <field name="TEXT">IdCirculo</field>
+                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="uC`!(Ef|RQ{Q+JHM[.Iw" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">IdMarcador</field>
                   </shadow>
                 </value>
                 <value name="ARG2">
-                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="FQ#lsK}~0h^[1?JmFSbk" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="$`p-$#2NZ5Dn.Fo^Xm55" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">Seu local</field>
+                  </shadow>
+                </value>
+                <value name="ARG3">
+                  <shadow colour="#5ba593" dependencyby="fk4dO/nFx,;}Z;Z`$;N6" id="ZP}-D{$Q_gf~ooi(Cz[D" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
                     <field name="TEXT"/>
                   </shadow>
-                  <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="tla1,N~0?}i3$mx$|v1_" multilayer="false" namespace="cronapi.maps.createLatLngPoint" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20coordenada%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20informa%20a%20latitude%20e%20longitude%20de%20um%20ponto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Latitude%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20lontitude%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                  <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="l[(isA*0I0/q1#~5)ZW-" multilayer="false" namespace="cronapi.maps.createLatLngPoint" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20coordenada%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20informa%20a%20latitude%20e%20longitude%20de%20um%20ponto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Latitude%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20lontitude%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
                     <mutation name="{{cronapi.maps.createLatLngPoint}}" return-raw-type="undefined">
                       <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Latitude"/>
                       <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="lontitude"/>
@@ -120,7 +180,7 @@
                       <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ftXcSGYsH#o%0|ENZS{K" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
                         <field name="TEXT"/>
                       </shadow>
-                      <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="]6ZMLUr#/hS$}eqXv!zw" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                      <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="@o%%VkOcV%HBp3RwF{$I" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
                         <field name="VAR">latitude</field>
                       </block>
                     </value>
@@ -128,109 +188,29 @@
                       <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="U[7lH|/3$]zFd5wz#?-{" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
                         <field name="TEXT"/>
                       </shadow>
-                      <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="^4zxCE1ipd`[xgsoRsiI" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                      <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="t0D],T.JF[d{g7XP)lWC" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
                         <field name="VAR">longitude</field>
                       </block>
                     </value>
                   </block>
                 </value>
-                <value name="ARG3">
-                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="Hl3.DlPET`Ae=5BcXUu#" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                    <field name="TEXT">20</field>
-                  </shadow>
-                </value>
                 <value name="ARG4">
-                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="+_oCwApth8]^d}eSHBL=" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                    <field name="TEXT">gray</field>
-                  </shadow>
-                </value>
-                <value name="ARG5">
-                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="0UZ-%8@}K0wK#=+.Y:T}" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                    <field name="TEXT">black</field>
-                  </shadow>
-                </value>
-                <value name="ARG6">
-                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="ggrjSoQ/33F6(Va)|8@{" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                    <field name="TEXT">0.4</field>
-                  </shadow>
-                </value>
-                <value name="ARG7">
-                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="l%W+XnRVG;]wKi:BDjyL" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="/d%^dj)}P3Ep,*Xkg6c0" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
                     <field name="TEXT"/>
                   </shadow>
                 </value>
-                <next>
-                  <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="JW,*:j^-mgrpNr9duIWn" multilayer="false" namespace="cronapi.maps.createMarker" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20marcador%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20marcador%20no%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Id%20do%20mapa%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20mapa.%3C/div%3E%3Cspan%3E%20-%20Id%20do%20marcador%20:%20Texto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20marcador%20no%20mapa.%3C/div%3E%3Cspan%3E%20-%20T%C3%ADtulo%20:%20Texto%3C/span%3E%3Cdiv%3E%20T%C3%ADtulo%20do%20marcador.%3C/div%3E%3Cspan%3E%20-%20Ponto%20:%20Texto%3C/span%3E%3Cdiv%3E%20Definir%20ponto%20para%20iniciar%20marcador.%3C/div%3E%3Cspan%3E%20-%20%C3%8Dcone%20:%20Texto%3C/span%3E%3Cdiv%3E%20Define%20o%20%C3%ADcone%20do%20marcador.%3C/div%3E%3Cspan%3E%20-%20Janela%20de%20informa%C3%A7%C3%B5es%20:%20Texto%3C/span%3E%3Cdiv%3E%20Conte%C3%BAdo%20que%20ir%C3%A1%20ser%20exibido%20na%20janela%20aberta%20ap%C3%B3s%20um%20clique%20no%20marcador.%3C/div%3E%3Cspan%3E%20-%20Op%C3%A7%C3%B5es%20avan%C3%A7adas%20:%20Texto%3C/span%3E%3Cdiv%3E%20Permite%20adicionar%20op%C3%A7%C3%B5es%20avan%C3%A7adas.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.createMarker%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.createMarker%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
-                    <mutation name="{{cronapi.maps.createMarker}}" return-raw-type="undefined">
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Id do mapa"/>
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Id do marcador"/>
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Título"/>
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Ponto"/>
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Ícone"/>
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Janela de informações"/>
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Opções avançadas"/>
-                    </mutation>
-                    <value name="ARG0">
-                      <block colour="#934848" dependencyby="*;!XEy94M)wa(%865^VL" id="7(|I#NO[{.si8Y[S%.u6" origintype="ids_from_screen" output="true" type="ids_from_screen">
-                        <field name="SELECT">google-maps</field>
-                      </block>
-                    </value>
-                    <value name="ARG1">
-                      <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="uC`!(Ef|RQ{Q+JHM[.Iw" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field name="TEXT">IdMarcador</field>
-                      </shadow>
-                    </value>
-                    <value name="ARG2">
-                      <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="$`p-$#2NZ5Dn.Fo^Xm55" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field name="TEXT">Seu local</field>
-                      </shadow>
-                    </value>
-                    <value name="ARG3">
-                      <shadow colour="#5ba593" dependencyby="fk4dO/nFx,;}Z;Z`$;N6" id="ZP}-D{$Q_gf~ooi(Cz[D" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
-                        <field name="TEXT"/>
-                      </shadow>
-                      <block colour="#ECB01E" dependencyby="*;!XEy94M)wa(%865^VL" id="l[(isA*0I0/q1#~5)ZW-" multilayer="false" namespace="cronapi.maps.createLatLngPoint" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20coordenada%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20informa%20a%20latitude%20e%20longitude%20de%20um%20ponto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Latitude%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20lontitude%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.maps.createLatLngPoint%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
-                        <mutation name="{{cronapi.maps.createLatLngPoint}}" return-raw-type="undefined">
-                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Latitude"/>
-                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="lontitude"/>
-                        </mutation>
-                        <value name="ARG0">
-                          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ftXcSGYsH#o%0|ENZS{K" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
-                            <field name="TEXT"/>
-                          </shadow>
-                          <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="@o%%VkOcV%HBp3RwF{$I" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                            <field name="VAR">latitude</field>
-                          </block>
-                        </value>
-                        <value name="ARG1">
-                          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="U[7lH|/3$]zFd5wz#?-{" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
-                            <field name="TEXT"/>
-                          </shadow>
-                          <block colour="#0088ee" dependencyby="*;!XEy94M)wa(%865^VL" id="t0D],T.JF[d{g7XP)lWC" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                            <field name="VAR">longitude</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="ARG4">
-                      <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="/d%^dj)}P3Ep,*Xkg6c0" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field name="TEXT"/>
-                      </shadow>
-                    </value>
-                    <value name="ARG5">
-                      <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="=tX@KfXQb_/.H)xi1H;," origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field name="TEXT"/>
-                      </shadow>
-                    </value>
-                    <value name="ARG6">
-                      <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="():*xQ)oAF@joY`U-8Za" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field name="TEXT"/>
-                      </shadow>
-                    </value>
-                  </block>
-                </next>
+                <value name="ARG5">
+                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="=tX@KfXQb_/.H)xi1H;," origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                </value>
+                <value name="ARG6">
+                  <shadow colour="#5ba593" dependencyby="*;!XEy94M)wa(%865^VL" id="():*xQ)oAF@joY`U-8Za" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                </value>
               </block>
-            </statement>
+            </next>
           </block>
         </statement>
       </block>
@@ -326,6 +306,33 @@
                                 <field name="TEXT"> </field>
                               </shadow>
                             </value>
+                            <next>
+                              <block colour="#934848" dependencyby="3xd?2N-YN#a0@zudG(0z" id="|uy2H*vZr2Sg(ZsgPE[O" multilayer="true" namespace="cronapi.screen.changeAttrValue" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EDefinir%20valor%20do%20atributo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20define%20o%20valor%20do%20atributo%20de%20um%20elemento%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Obter%20identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20(id)%20a%20ser%20obtido%20do%20Formul%C3%A1rio%20selecionado%3C/div%3E%3Cspan%3E%20-%20Nome%20do%20atributo%20:%20Texto%3C/span%3E%3Cdiv%3E%20Nome%20do%20atributo%20contido%20no%20Identificador.%20Exemplo:%20%20src='teste'%20retorna%20src%3C/div%3E%3Cspan%3E%20-%20Valor%20do%20atributo%20:%20Texto%3C/span%3E%3Cdiv%3E%20Valor%20do%20atributo%20contido%20no%20Identificador.%20Exemplo:%20%20src='teste'%20retorna%20teste%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeAttrValue%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeAttrValue%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                                <mutation name="{{cronapi.screen.changeAttrValue}}" return-raw-type="undefined">
+                                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Obter identificador"/>
+                                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Nome do atributo"/>
+                                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Valor do atributo"/>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block colour="#934848" dependencyby="3xd?2N-YN#a0@zudG(0z" id="pkjl9Q8{i`;@aDS`~Wqj" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                                    <field name="SELECT">google-maps</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <shadow colour="#5ba593" dependencyby="3xd?2N-YN#a0@zudG(0z" id="E$C{0+OtwPf-Tv4|ddeh" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">src</field>
+                                  </shadow>
+                                </value>
+                                <value name="ARG2">
+                                  <shadow colour="#5ba593" dependencyby="N;ej8[R_EP7pVS6My;:`" id="b}yicm|12.[4{b?7E,hP" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                                    <field name="TEXT"/>
+                                  </shadow>
+                                  <block colour="#5ba593" dependencyby="3xd?2N-YN#a0@zudG(0z" id=":W!1D(op)KYeh=_gQ^Ph" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT"/>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>

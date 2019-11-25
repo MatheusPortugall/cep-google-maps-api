@@ -7,34 +7,33 @@ window.blockly.js.blockly.Localizacao = window.blockly.js.blockly.Localizacao ||
  * Descreva esta função...
  */
 window.blockly.js.blockly.Localizacao.definir_rendodeza_via_cep = function(latitude, longitude) {
- var item, consultaEndereco, coordenadas, endereco, exibirBairro, exibirCidade, exibirEstado, google_bairro, google_cep, google_cidade, google_logradouro, google_pais, link, listaBairro, listaEndereco, localidade, opcaoSelecionada, param, results, url, x;
-  if (!this.cronapi.maps.isInitialized("google-maps")) {
-    this.cronapi.maps.init("google-maps", 'roadmap', this.cronapi.maps.createLatLngPoint(latitude, longitude), '16', function(sender_item) {
-        item = sender_item;
-      this.cronapi.maps.drawCircle("google-maps", 'IdCirculo', this.cronapi.maps.createLatLngPoint(latitude, longitude), '20', 'gray', 'black', '0.4', '');
-      this.cronapi.maps.createMarker("google-maps", 'IdMarcador', 'Seu local', this.cronapi.maps.createLatLngPoint(latitude, longitude), '', '', '');
-    }.bind(this));
-  }
+ var item, endereco, consultaEndereco, results, coordenadas, url, link, google_cep, google_logradouro, exibirBairro, exibirCidade, exibirEstado, listaBairro, google_bairro, localidade, google_cidade, google_pais, listaEndereco, param, opcaoSelecionada;
+  this.cronapi.maps.init("google-maps", 'roadmap', this.cronapi.maps.createLatLngPoint(latitude, longitude), '16', function(sender_item) {
+      item = sender_item;
+    this.cronapi.maps.drawCircle("google-maps", 'IdCirculo', this.cronapi.maps.createLatLngPoint(latitude, longitude), '20', 'gray', 'black', '0.4', '');
+    this.cronapi.maps.createMarker("google-maps", 'IdMarcador', 'Seu local', this.cronapi.maps.createLatLngPoint(latitude, longitude), '', '', '');
+  }.bind(this));
 }
 
 /**
  * Descreva esta função...
  */
 window.blockly.js.blockly.Localizacao.limpaCampos = function() {
- var item, consultaEndereco, coordenadas, endereco, exibirBairro, exibirCidade, exibirEstado, google_bairro, google_cep, google_cidade, google_logradouro, google_pais, latitude, link, listaBairro, listaEndereco, localidade, longitude, opcaoSelecionada, param, results, url, x;
+ var item, longitude, latitude, endereco, consultaEndereco, results, coordenadas, url, link, google_cep, google_logradouro, exibirBairro, exibirCidade, exibirEstado, listaBairro, google_bairro, localidade, google_cidade, google_pais, listaEndereco, param, opcaoSelecionada;
   console.log('limpando campos...');
   this.cronapi.screen.changeValueOfField("vars.estado", ' ');
   this.cronapi.screen.changeValueOfField("vars.cidade", ' ');
   this.cronapi.screen.changeValueOfField("vars.bairro", ' ');
   this.cronapi.screen.changeValueOfField("vars.cep", ' ');
   this.cronapi.screen.changeValueOfField("vars.logradouro", ' ');
+  this.cronapi.screen.changeAttrValue("google-maps", 'src', '');
 }
 
 /**
  * Descreva esta função...
  */
 window.blockly.js.blockly.Localizacao.obter_endereco = function(coordenadas) {
- var item, consultaEndereco, endereco, exibirBairro, exibirCidade, exibirEstado, google_bairro, google_cep, google_cidade, google_logradouro, google_pais, latitude, link, listaBairro, listaEndereco, localidade, longitude, opcaoSelecionada, param, results, url, x;
+ var item, longitude, latitude, endereco, consultaEndereco, results, url, link, google_cep, google_logradouro, exibirBairro, exibirCidade, exibirEstado, listaBairro, google_bairro, localidade, google_cidade, google_pais, listaEndereco, param, opcaoSelecionada;
   url = ['https://maps.googleapis.com/maps/api/geocode/json?',coordenadas,'&key=AIzaSyA2paKBkuaM15miMJk9wxkdvGz2tzby5y4'].join('');
   this.cronapi.util.getURLFromOthers('GET', 'application/x-www-form-urlencoded', url, null, this.cronapi.json.createObjectFromString(['{\"Access-Control-Allow-Origin\":','\"https://maps.googleapis.com/maps/api/geocode/json?',coordenadas,'&key=AIzaSyA2paKBkuaM15miMJk9wxkdvGz2tzby5y4\"}'].join('')), function(sender_item) {
       item = sender_item;
@@ -54,7 +53,7 @@ window.blockly.js.blockly.Localizacao.obter_endereco = function(coordenadas) {
  * Descreva esta função...
  */
 window.blockly.js.blockly.Localizacao.setar_endereco = function(endereco) {
- var item, consultaEndereco, coordenadas, exibirBairro, exibirCidade, exibirEstado, google_bairro, google_cep, google_cidade, google_logradouro, google_pais, latitude, link, listaBairro, listaEndereco, localidade, longitude, opcaoSelecionada, param, results, url, x;
+ var item, longitude, latitude, consultaEndereco, results, coordenadas, url, link, google_cep, google_logradouro, exibirBairro, exibirCidade, exibirEstado, listaBairro, google_bairro, localidade, google_cidade, google_pais, listaEndereco, param, opcaoSelecionada;
   listaEndereco = coordenadas.split(',');
   google_logradouro = coordenadas[0];
   google_bairro = coordenadas[1];
@@ -79,7 +78,7 @@ window.blockly.js.blockly.Localizacao.setar_endereco = function(endereco) {
  * Descreva esta função...
  */
 window.blockly.js.blockly.Localizacao.obter_coordenadas = function() {
- var item, consultaEndereco, coordenadas, endereco, exibirBairro, exibirCidade, exibirEstado, google_bairro, google_cep, google_cidade, google_logradouro, google_pais, latitude, link, listaBairro, listaEndereco, localidade, longitude, opcaoSelecionada, param, results, url, x;
+ var item, longitude, latitude, endereco, consultaEndereco, results, coordenadas, url, link, google_cep, google_logradouro, exibirBairro, exibirCidade, exibirEstado, listaBairro, google_bairro, localidade, google_cidade, google_pais, listaEndereco, param, opcaoSelecionada;
   console.log('sucesso');
   this.cronapi.cordova.geolocation.getCurrentPosition(function(sender_item) {
       item = sender_item;
@@ -108,7 +107,7 @@ window.blockly.js.blockly.Localizacao.obter_coordenadas = function() {
  * Descreva esta função...
  */
 window.blockly.js.blockly.Localizacao.seleciona_opcao_endereco = function() {
- var item, consultaEndereco, coordenadas, endereco, exibirBairro, exibirCidade, exibirEstado, google_bairro, google_cep, google_cidade, google_logradouro, google_pais, latitude, link, listaBairro, listaEndereco, localidade, longitude, opcaoSelecionada, param, results, url, x;
+ var item, longitude, latitude, endereco, consultaEndereco, results, coordenadas, url, link, google_cep, google_logradouro, exibirBairro, exibirCidade, exibirEstado, listaBairro, google_bairro, localidade, google_cidade, google_pais, listaEndereco, param, opcaoSelecionada;
   console.log('abc');
   opcaoSelecionada = this.cronapi.screen.getValueOfField("vars.combobox6705");
   if (opcaoSelecionada == 2) {
